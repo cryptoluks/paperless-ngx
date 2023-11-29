@@ -20,7 +20,7 @@ RUN wget --progress=bar:force:noscroll https://github.com/zxing-cpp/zxing-cpp/ar
 FROM ghcr.io/paperless-ngx/paperless-ngx
 
 # Copy built files from builder
-COPY --from=builder /usr/local/lib/python3.9/site-packages/zxing_cpp*.egg /usr/local/lib/python3.9/site-packages/
+COPY --from=builder /usr/local/lib/python3.11/site-packages/zxing_cpp*.egg /usr/local/lib/python3.11/site-packages/
 
 # Install build dependencies
 RUN apt-get update && \
