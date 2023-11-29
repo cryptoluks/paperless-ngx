@@ -1,5 +1,5 @@
 # Build stage for zxing-cpp
-FROM docker.io/library/python:3.9-bookworm as builder
+FROM docker.io/library/python:3.11-bookworm as builder
 
 # Install build dependencies
 RUN apt-get update && \
